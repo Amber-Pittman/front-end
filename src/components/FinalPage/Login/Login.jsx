@@ -2,7 +2,7 @@ import React, {useState} from "react";
 // Instead of importing axios, we'll import AxiosWithAuth, axios can be removed
 import AxiosWithAuth from '../../Utilities/AxiosWithAuth';
 
-function Login(props) {
+export default function Login(props) {
     // Set up error state for error component/message
     const [error, setError] = useState()
 
@@ -77,8 +77,8 @@ function Login(props) {
                 value={data.password}
                 onChange={handleChange}
                 />
+
             <button type="submit">Login</button>
         </form>
     )
 }
-export default Login;
